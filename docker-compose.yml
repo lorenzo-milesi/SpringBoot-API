@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  database:
+    image: mariadb
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - mariadata:/var/lib/mysql
+volumes:
+  mariadata:
